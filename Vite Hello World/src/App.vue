@@ -1,11 +1,13 @@
 <script>
 import AppLinkHeader from './components/AppLinkHeader.vue';
 import AppLogoHeader from './components/AppLogoHeader.vue';
+import AppLogInHeader from './components/AppLogInHeader.vue';
 
 export default {
   components: {
     AppLogoHeader,
     AppLinkHeader,
+    AppLogInHeader,
 
   }
 }
@@ -16,8 +18,11 @@ export default {
   <header class="main_header">
     <div class="container">
       <div class="row">
-        <AppLogoHeader/>
-        <AppLinkHeader/>
+        <div class="col-3"><AppLogoHeader/></div>
+        <div class="col-6"><AppLinkHeader/></div>
+        <div class="col-3"><AppLogInHeader/></div>
+        
+        
       </div>
     </div>
     
@@ -51,6 +56,16 @@ export default {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  
 }
+
+.col-3{
+  width: calc(3 * (100% / 12));
+}
+
+.col-6{
+  width: calc(6 * (100% / 12)) ;
+}
+
+
 </style>

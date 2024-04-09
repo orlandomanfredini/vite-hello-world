@@ -10,14 +10,14 @@ export default {
 </script>
 
 <template>
-    <div class="col-3">
+    <div class="img">
         <img :src="logo" alt="">
     </div>
             
 </template>
 
 <style scoped>
-.col-3{
+.img{
     width: calc(4 * (100% / 12));
     padding: 5px;
 }

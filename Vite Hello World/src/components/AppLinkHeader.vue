@@ -16,11 +16,31 @@ export default {
 </script>
 
 <template>
-    <div class="col-6">
+    
         <ul>
-            <li v-for="link in links"><a :href="link"></a></li>
+            <li v-for="link in links"><a :href="link">Link</a></li>
         </ul>
-    </div>
+    
 </template>
 
-<style></style>
+<style scoped>
+ul, li, menu{
+    list-style: none;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+
+a{
+    color: black;
+    text-decoration: none;
+    font-size: 13px;
+}
+</style>
