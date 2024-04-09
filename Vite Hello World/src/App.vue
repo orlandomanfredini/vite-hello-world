@@ -1,11 +1,9 @@
 <script>
-import AppTitle from './components/AppTitle.vue'
-import AppJumbo from './components/AppJumbo.vue';
+import AppLogoHeader from './components/AppLogoHeader.vue';
 
 export default {
   components: {
-    AppTitle,
-    AppJumbo,
+    AppLogoHeader,
 
   }
 }
@@ -13,20 +11,10 @@ export default {
 
 
 <template>
-  <h1>Titolo App.vue</h1>
-  <div>
-    <AppTitle/>
-  </div>
-  <section>
-    <div>
-      <AppTitle/>
-    </div>
-
-    <div>
-      <AppJumbo/>
-      
-    </div>
-  </section>
+  <header class="main_header">
+    <AppLogoHeader/>
+  </header>
+  
 </template>
 
 <style scoped>
@@ -43,5 +31,11 @@ export default {
 
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
+}
+
+.main_header{
+  width: 100%;
+  background-color: rgb(183, 98, 98);
+  border-radius: 20px;
 }
 </style>
