@@ -1,9 +1,11 @@
 <script>
+import AppLinkHeader from './components/AppLinkHeader.vue';
 import AppLogoHeader from './components/AppLogoHeader.vue';
 
 export default {
   components: {
     AppLogoHeader,
+    AppLinkHeader,
 
   }
 }
@@ -12,7 +14,13 @@ export default {
 
 <template>
   <header class="main_header">
-    <AppLogoHeader/>
+    <div class="container">
+      <div class="row">
+        <AppLogoHeader/>
+        <AppLinkHeader/>
+      </div>
+    </div>
+    
   </header>
   
 </template>
@@ -35,7 +43,14 @@ export default {
 
 .main_header{
   width: 100%;
-  background-color: rgb(183, 98, 98);
+  background-color: rgb(255, 255, 255);
   border-radius: 20px;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 </style>
